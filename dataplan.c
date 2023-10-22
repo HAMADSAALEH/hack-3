@@ -17,7 +17,7 @@ int main()
 
     printf("Enter the current day in the 30 day period (1-30): ");
     scanf("%f", &curr_day);
-    
+
     if (total_GB <= 0)
     {
         printf("Total GB must be greater than 0. Please enter a valid value.\n");
@@ -27,4 +27,19 @@ int main()
 
     printf("Enter the current day in the 30 day period (1-30): ");
     scanf("%f", &curr_day);
+ if (Gb_used < 0)
+    {
+        printf("Total GB used must be non-negative. Please enter a valid value.\n");
+        return 1;
+    } 
+   
+   
+    int days_used = curr_day - 1;
+    int days_remaining = 30 - days_used;
+    float average_daily_use = Gb_used / days_used;
+
+    printf("%d days used, %d days remaining\n", days_used, days_remaining);
+    printf("Average daily use: %.3f GB/day\n", average_daily_use);
+
+    
 
