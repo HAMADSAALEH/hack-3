@@ -41,5 +41,11 @@ int main()
     printf("%d days used, %d days remaining\n", days_used, days_remaining);
     printf("Average daily use: %.3f GB/day\n", average_daily_use);
 
-    
+   if (average_daily_use <= total_GB / 30.0)
+   
+    {
+        printf("You are UNDER your average daily use (%.3f GB/day).\n", total_GB / 30.0);
+        printf("You can use up to %.3f GB/day to stay within your data plan.\n", total_GB / 30.0);
+    }
+
 
